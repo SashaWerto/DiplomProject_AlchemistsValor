@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: a48e6e94e903c5f4d861737894efae31
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - bloodParticles: {fileID: 6437356009623002431, guid: ea318a4b2a4256b459ee73f24164ca17,
+      type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

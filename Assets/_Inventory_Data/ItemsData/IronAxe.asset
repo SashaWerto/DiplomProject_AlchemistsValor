@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 288fce03e1249ee43af5bead4e852ae6, type: 3}
+  m_Name: IronAxe
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 1a995ea5db13fb940a99adee5d142180, type: 3}
+  label: "\u0416\u0435\u043B\u0435\u0437\u043D\u044B\u0439 \u0422\u043E\u043F\u043E\u0440"
+  description: 
+  mesh: {fileID: -8287839383430266118, guid: dc3caea0bf80eee45b7dfb4dc3ec54b5, type: 3}
+  meshMaterial: {fileID: 7787741102578273941, guid: dc3caea0bf80eee45b7dfb4dc3ec54b5,
+    type: 3}
+  isStackable: 0
+  maxStack: 1
+  maxDurability: 25
+  recipe:
+  - item: {fileID: 11400000, guid: 9f20790c5c460c540b7bfe54c951296c, type: 2}
+    count: 10
+  - item: {fileID: 11400000, guid: df8e337c8424eeb488d8e5d576758006, type: 2}
+    count: 20
+  craftCount: 1
+  itemType: 256
+  toolPrefab: {fileID: 9135373860734194919, guid: b2b01c16d2ad6b843a9932c17d71a63a,
+    type: 3}
+  staminaCost: 2
+  stun: 1
+  gatherDamage: 5
+  damage: 2

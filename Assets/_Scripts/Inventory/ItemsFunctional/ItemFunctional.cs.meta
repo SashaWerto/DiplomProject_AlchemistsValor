@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 4651b036869fac045b6ad04086104488
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _hitPoint: {instanceID: 0}
+  - _hitParticle: {fileID: 5496651040786749896, guid: 80657c1ac328aae4caa064a0660ca4a2, type: 3}
+  - _animator: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

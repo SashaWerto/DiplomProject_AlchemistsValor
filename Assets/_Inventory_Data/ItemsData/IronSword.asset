@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ced66b1c2e8eac47a55550049d6d5d6, type: 3}
+  m_Name: IronSword
+  m_EditorClassIdentifier: 
+  icon: {fileID: 21300000, guid: 9e521f3ea7bd0de47a54e3b2aa9ea37c, type: 3}
+  label: "\u0416\u0435\u043B\u0435\u0437\u043D\u044B\u0439 \u043C\u0435\u0447"
+  description: 
+  mesh: {fileID: 4686849319519084627, guid: 10d2c5cac402315478e886d9e4307ffd, type: 3}
+  meshMaterial: {fileID: -1185096321009409836, guid: 10d2c5cac402315478e886d9e4307ffd,
+    type: 3}
+  isStackable: 0
+  maxStack: 1
+  maxDurability: 100
+  recipe:
+  - item: {fileID: 11400000, guid: 9f20790c5c460c540b7bfe54c951296c, type: 2}
+    count: 50
+  - item: {fileID: 11400000, guid: 8b8d077f631be3e4a8c71b6b35d026eb, type: 2}
+    count: 50
+  craftCount: 1
+  itemType: 1
+  weaponPrefab: {fileID: 788611105132614101, guid: 74f52dd41722ef94bb3cb93f5144d872,
+    type: 3}
+  damage: 6
+  staminaCost: 3
+  stun: 2
+  force: 2
