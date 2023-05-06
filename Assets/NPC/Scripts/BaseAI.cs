@@ -21,6 +21,7 @@ public class BaseAI : MonoBehaviour
     protected private NavMeshPath _navmeshPath;
     protected private float _distanceToTarget;
     protected private Vector3 _directionToPoint;
+    protected private Coroutine _pathUpdater;
     public Animator AnimatorAI { get => _animator; set => _animator = value; }
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class BaseAI : MonoBehaviour
     protected virtual void Start()
     {
         _startPos = transform.position;
-        StartCoroutine(UpdatePath());
+        _pathUpdater = StartCoroutine(UpdatePath());
     }
     protected virtual void Update()
     {
@@ -57,9 +58,9 @@ public class BaseAI : MonoBehaviour
     protected void MoveToTarget()
     {
         _rigidbody.AddForce(_directionToPoint.normalized * _speed, ForceMode.Force);
-        RotateToTarget();
+        RotateToPath();
     }
-    protected void RotateToTarget()
+    protected void RotateToPath()
     {
         Quaternion targetRotation = Quaternion.LookRotation(_navmeshPath.corners[_currentIndexOfPath] - transform.position);
         var angle = targetRotation.eulerAngles;
@@ -88,7 +89,7 @@ public class BaseAI : MonoBehaviour
         }
         else _animator.SetBool("onStun", false);
     }
-    IEnumerator UpdatePath()
+    public IEnumerator UpdatePath()
     {
         while(true)
         {
@@ -116,7 +117,10 @@ public class BaseAI : MonoBehaviour
             Dead();
             return;
         }
-        else _animator.SetTrigger("Damaged");
+        else
+        {
+            _animator.SetTrigger("Damaged");
+        }
     }
     public void Dead()
     {
@@ -133,5 +137,10 @@ public class BaseAI : MonoBehaviour
     protected virtual void Attack()
     {
 
+    }
+    protected private void RestartPathUpdate()
+    {
+        StopCoroutine(_pathUpdater);
+        _pathUpdater = StartCoroutine(UpdatePath());
     }
 }

@@ -30,7 +30,7 @@ public class Tool_Functional : ItemFunctional
         {        
             if (hit.collider.TryGetComponent<IDamageable>(out var enemy))
             {
-                enemy.GetDamage(_stats.AllDamage);
+                enemy.GetDamage(_stats.ToolDamage);
             }
             if (hit.collider.TryGetComponent<IGatherable>(out var resourceObject))
             {

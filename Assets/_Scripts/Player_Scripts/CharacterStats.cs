@@ -9,6 +9,7 @@ public class CharacterStats : MonoBehaviour
     [SerializeField] private Health _health;
     [Header("Preferences")]
     private float _weaponDamage;
+    private float _toolDamage;
     private float _toolGatherDamage;
     private float _stunEffect;
     private float _helmetArmor;
@@ -17,6 +18,7 @@ public class CharacterStats : MonoBehaviour
     private float _allDamage;
     public float Health { get => _health.CurrentHealth; set => _health.CurrentHealth = value; } 
     public float WeaponDamage { get => _weaponDamage; set => _weaponDamage = value; } 
+    public float ToolDamage { get => _toolDamage; set => _toolDamage = value; } 
     public float ToolGatherDamage { get => _toolGatherDamage; set => _toolGatherDamage = value; } 
     public float StunEffect { get => _stunEffect; set => _stunEffect = value; } 
     public float HelmetArmor { get => _helmetArmor; set => _helmetArmor = value; } 

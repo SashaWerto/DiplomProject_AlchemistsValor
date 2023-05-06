@@ -10,10 +10,9 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
         RectTransform cellRectTransform = eventData.pointerDrag.transform as RectTransform;
         if (RectTransformUtility.RectangleContainsScreenPoint(cellRectTransform, Input.mousePosition) && cellRectTransform.TryGetComponent<ItemDropHandler>(out var item))
         {
-            /*
-            if (item.RefCell.ItemInCell && _cell.ItemInCell.name == item.RefCell.ItemInCell.name)
-            {
-                for (int i = 0; i < item.RefCell.Count; i++)
+            if (item.RefCell.ItemInCell && _cell.ItemInCell && _cell.ItemInCell.name == item.RefCell.ItemInCell.name && item.RefCell.ItemInCell.isStackable && _cell.ItemInCell.isStackable)
+            {              
+                for (int i = 0; i < _cell.Count; i++)
                 {
                     if (_cell.Count >= _cell.ItemInCell.maxStack)
                     {
@@ -23,12 +22,13 @@ public class ItemDropHandler : MonoBehaviour, IDropHandler
                     {
                         break;
                     }
-                    _cell.Count += 1;
-                    item.RefCell.Count -= 1;
+                    item.RefCell.Count -= 1; // Перетаскиваемая
+                    _cell.Count += 1; //Та на которую переношу
                 }
+                _cell.RefreshCell();
+                item.RefCell.RefreshCell();
                 return;
             }
-            */
             if (_cell.TypeOfSlot == 0)
             {
                 if(item.RefCell.ItemInCell && _cell.ItemInCell)

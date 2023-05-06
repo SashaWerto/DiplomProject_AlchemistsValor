@@ -64,7 +64,7 @@ public class EquipmentManager : MonoBehaviour
                     _toolFunctional.SetFull();
                 else
                     _toolFunctional.SetBroken();
-                _characterStats.WeaponDamage = tool.damage;
+                _characterStats.ToolDamage = tool.damage;
                 _characterStats.ToolGatherDamage = tool.gatherDamage;
                 SetCharacterStatsForTool(_toolFunctional, _equipableCells[id]);
                 _characterStats.RefreshParameters();
@@ -134,6 +134,7 @@ public class EquipmentManager : MonoBehaviour
     {
         Destroy(_toolPrefab);
         _characterStats.ToolGatherDamage = 0;
+        _characterStats.ToolDamage = 0;
         _toolFunctional = null;
     }
     private void UnequipWeapon()
